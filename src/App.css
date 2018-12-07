@@ -210,7 +210,7 @@ a {
   width: 75%;
   margin: 0 auto;
   color: #fff;
-  font-family: 'Montserrat', Helvetica, sans-serif
+  font-family: 'Montserrat', Trebuchet MS, 'Gill Sans', Helvetica, sans-serif
 }
 
 .banner__content > p {
@@ -351,11 +351,6 @@ section {
   border-radius: 5px;
 }
 
-.button.attention {
-  font-size: 1.4em;
-}
-
-
 .button a {
   /* padding: 5px 10px; */
   text-decoration: none;
@@ -386,10 +381,29 @@ section {
   color: #fff;
 }
 
-.button.primary-action:hover, .button.primary-action:focus, .button.primary-action:focus a, .button.primary-action:hover a, .button.primary-action a:hover, .button.primary-action a:focus {
+.button.primary-action:hover, .button.primary-action:focus, .button.primary-action:focus a,
+.button.primary-action:hover a, .button.primary-action a:hover, .button.primary-action a:focus {
   background-color: #fff;
   border-color: lightgreen;
   color: lightgreen;
+}
+
+.button.home__btn {
+  /* background-color: var(--secondary-bg-color); */
+  background-color: #fff;
+  font-size: 1.4em;
+  transition: all 0.4s ease-in-out;
+}
+
+.button.home__btn, .button.home__btn a {
+  color: var(--secondary-bg-color);
+}
+
+.button.home__btn:hover, .button.home__btn:focus,
+.button.home__btn:focus a, .button.home__btn:hover a, .button.home__btn a:hover, .button.home__btn a:focus {
+  background-color: var(--secondary-bg-color);
+  border-color: #fff;
+  color: #fff;
 }
 
 
@@ -406,8 +420,8 @@ button.tall-btn {
 }
 
 .main {
-  height: calc(100vh - 140px);
-  margin: 10px auto;
+  min-height: calc(100vh - 140px);
+  margin: 0px auto;
 }
 .card {
   min-height: calc(100vh - 210px);
@@ -462,7 +476,7 @@ button.tall-btn {
 
 @media (max-width: 500px) {
   .main {
-      margin: 5px 0;
+      margin: 0;
   }
   .header {
       height: 100%;
