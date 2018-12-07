@@ -120,10 +120,12 @@ a {
 .header {
   height: 70px;
   background-color: var(--secondary-bg-color);
+  display: flex;
 }
 
 .header__content {
-  margin: 5px 10%;
+  margin: auto 10%;
+  width: 100%;
 }
 
 .header__content .logo {
@@ -227,6 +229,8 @@ a {
 
 section {
   /* margin-bottom: 25px; */
+  color: var(--secondary-bg-color);
+  /* opacity: 0.8; */
 }
 
 .howto {
@@ -286,7 +290,6 @@ section {
 }
 
 .showcase {
-  /* margin-top: 20px; */
   margin-bottom: 20px;
 }
 
@@ -303,7 +306,7 @@ section {
 .showcase__text {
   font-family: 'Raleway', sans-serif;
   padding: 10px 30px;
-  color: var(--primary-color);
+  color: var(--secondary-bg-color);
   font-size: 1.3em;
   text-align: center;
 }
@@ -389,7 +392,6 @@ section {
 }
 
 .button.home__btn {
-  /* background-color: var(--secondary-bg-color); */
   background-color: #fff;
   font-size: 1.4em;
   transition: all 0.4s ease-in-out;
@@ -421,7 +423,7 @@ button.tall-btn {
 
 .main {
   min-height: calc(100vh - 140px);
-  margin: 0px auto;
+  margin: 0;
 }
 .card {
   min-height: calc(100vh - 210px);
@@ -447,7 +449,6 @@ button.tall-btn {
   .showcase__text {
       font-family: 'Raleway', sans-serif;
       padding: 10% 30px;
-      color: var(--primary-color);
       font-size: 1.5em;
   }
 }
