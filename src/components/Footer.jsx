@@ -6,7 +6,7 @@ export default () => (
         <div className="footer__content flex">
             <p><a href="#">Contact</a></p>
             <p>
-                <a href="#">Privacy</a>
+                <a href="#">Privacy</a> &nbsp;
                 <a href="#">Terms Of Service</a>
             </p>
         </div>
