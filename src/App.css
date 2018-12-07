@@ -468,6 +468,10 @@ button.tall-btn {
       height: 100%;
   }
 
+  .subtitle {
+    font-size: calc(var(--base-font) * 0.9);    
+  }
+
   .header__content {
       flex-direction: column
   }
