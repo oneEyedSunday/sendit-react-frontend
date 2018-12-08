@@ -28,7 +28,7 @@ export  default () => (
                 <section className="showcase flex">
                     <div className="showcase__item flex-column">
                         <figure className="figure">
-                            <img src="images/ship.jpg" alt="Shipping Parcel" className="showvase__image" />
+                            <img src="images/ship.jpg" alt="Shipping Parcel" className="showcase__image" />
                         </figure>
                         <figcaption className="showcase__text">You Create Order</figcaption>
                     </div>
