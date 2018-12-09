@@ -3,7 +3,7 @@
     font-weight: 400;
     text-align: center;
     margin: 0 auto;
-    font-family: 'Lato' sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .parcel__context p > a {
@@ -35,9 +35,55 @@
     margin-bottom: 20px;
 }
 
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.sevenOfWidth {
+    width: 70%
+}
+
+.info__container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid var(--bg-color);
+    border-radius: 3px;
+    padding: 1em;
+    margin-top: 1.3em;
+    font-size: 1.2em;
+    font-family: 'Montserrat', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+.info__field {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 10px 5px;
+}
+
+.info__field .info__label {
+    width: 40%;
+    /* only needed on smalle screens */
+    min-width: 100px; 
+    padding: 0 5px;
+}
+
+.info__field .info {
+    text-align: left;
+    width: 100%;
+    padding: 0 10%;
+    text-transform: capitalize;
+}
+
 @media (max-width: 950px) {
     .parcel__button {
         padding-left: 2px;
         padding-right: 2px;
     }
 }
+
