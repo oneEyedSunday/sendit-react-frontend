@@ -47,7 +47,7 @@ export default class Auth extends PureComponent {
         const { headerText, alternateLink, alternatePrompt, alternateText } = getText(this.props.location.pathname);
         return (
             <div className="card my-2">
-                <form action="#" className="form">
+                <form action="#" className="auth form">
                     <h2 className="text-center">{ headerText }</h2>
                     { 
                         this.props.location.pathname.toLowerCase() === '/signup' ? 
@@ -55,14 +55,15 @@ export default class Auth extends PureComponent {
                                 <React.Fragment>
                                     <div className="form__field flex flex justify-content__center align-items__center">
                                         <input type="text"  name="firstname" placeholder="First Name"
-                                        className="four-fifths"
+                                        className="auth four-fifths"
                                         value={this.state.firstname}
                                         onChange={this.handleChange}
                                         />
                                     </div>
                                     <div className="form__field flex flex justify-content__center align-items__center">
                                         <input type="text"  name="lastname" placeholder="Last Name"
-                                        className="four-fifths"
+                                        className="auth 
+                                        four-fifths"
                                         value={this.state.lastname}
                                         onChange={this.handleChange}
                                         />
@@ -74,14 +75,14 @@ export default class Auth extends PureComponent {
                     
                     <div className="form__field flex flex justify-content__center align-items__center">
                         <input type="email"  name="email" placeholder="Email address"
-                        className="four-fifths"
+                        className="auth four-fifths"
                         value={this.state.email}
                         onChange={this.handleChange}
                         />
                     </div>
                     <div className="form__field flex justify-content__center align-items__center">
                         <input type="password" placeholder="Password" name="password"
-                        className="four-fifths"
+                        className="auth four-fifths"
                         autoComplete="new-password"
                         value={this.state.password}
                         onChange={this.handleChange}
@@ -91,7 +92,7 @@ export default class Auth extends PureComponent {
                             this.props.location.pathname.toLowerCase() === '/signup' ? (
                                 <div className="form__field flex justify-content__center align-items__center">
                                     <input type="password" placeholder="Confirm Password" name="confirm_password"
-                                    className="four-fifths"
+                                    className="auth four-fifths"
                                     autoComplete="new-password"
                                     value={this.state.confirmPassword}
                                     onChange={this.handleChange}
@@ -102,7 +103,7 @@ export default class Auth extends PureComponent {
                     }
             
                     <div className="form__field flex justify-content__center align-items__center">
-                            <button type="submit" className="button four-fifths">{ headerText }</button>
+                            <button type="submit" className="auth button four-fifths">{ headerText }</button>
                     </div>
                     <p className="text-center larger--text">{ alternatePrompt } &nbsp;
                         <a href={ alternateLink } className="link">{ alternateText }</a>
