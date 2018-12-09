@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-size: 1.2em;
+}
+
+tr {
+    padding: 10px;
+    border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 10px;
+}
+
+thead {
+    border-bottom: 2px solid var(--secondary-bg-color);
+}
+
+th, td {
+    white-space: nowrap;
+}
