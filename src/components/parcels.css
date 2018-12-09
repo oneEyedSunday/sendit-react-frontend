@@ -1,0 +1,13 @@
+.parcel__context {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.parcel__context p > a {
+    margin-left: 10%;
+}
+
+.parcel__context p>a:hover, .parcel__context p>a:focus {
+    content: 'Create Order';
+}
