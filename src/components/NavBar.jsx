@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 
-let logoRef;
 let navRef;
 
 const handleLogoClick = evt => {
@@ -15,7 +14,7 @@ export default (props) => (
     <nav className="header">
         <div className="header__content flex justify-content__sb">
             <div className="flex justify-content__sb">
-                <div className="logo rounded-edges" ref={(div) => { logoRef = div; console.log(logoRef)} } onClick={handleLogoClick}>
+                <div className="logo rounded-edges" onClick={handleLogoClick}>
                     <a href="/" title="Home"></a>
                 </div>
                 <a href="/" className="logo__text">SendIT</a>
