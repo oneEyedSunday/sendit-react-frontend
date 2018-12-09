@@ -43,11 +43,16 @@ export default class Auth extends PureComponent {
         this.setState(newData);
     }
 
+    submitForm = evt => {
+        evt.preventDefault();
+        this.props.history.push('/parcels')
+    }
+
     render(){
         const { headerText, alternateLink, alternatePrompt, alternateText } = getText(this.props.location.pathname);
         return (
             <div className="card my-2">
-                <form action="#" className="auth form">
+                <form action="#" className="auth form" onSubmit={this.submitForm}>
                     <h2 className="text-center">{ headerText }</h2>
                     { 
                         this.props.location.pathname.toLowerCase() === '/signup' ? 
