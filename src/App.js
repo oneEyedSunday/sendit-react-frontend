@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import './App.css';
-
 import components from './components';
 
-const { Footer, NavBar, Home, Auth } = components;
+const { Footer, NavBar, Home, Auth, Parcels } = components;
 
 class App extends Component {
   render() {
@@ -14,9 +12,10 @@ class App extends Component {
           <main className="main">
             <Router>
               <Switch>
-              <Route path="/" exact component={Home}></Route>
-              <Route path="/signin" component={Auth}></Route>
-              <Route path="/signup" component={Auth}></Route>
+                <Route path="/" exact component={Home}></Route>
+                <Route path="/signin" component={Auth}></Route>
+                <Route path="/signup" component={Auth}></Route>
+                <Route path="/parcels" component={Parcels} />
               </Switch>
             </Router>
           </main>
