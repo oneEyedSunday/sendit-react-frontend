@@ -1,4 +1,5 @@
 import React from 'react';
+import './table.css';
 
 const options = [
     {
@@ -16,7 +17,9 @@ const options = [
 ]
 
 export default props => (
-    <div id="overflowContainer">
+    <div id="overflowContainer" style={{
+        overflowX: 'auto',
+    }}>
         <table className="margin-y-mixed">
             <thead>
                 <tr>
@@ -35,10 +38,10 @@ export default props => (
                             <td key={option.text}>
                                {
                                   option.text === 'Cancel' ? (
-                                      <button className="button danger">Cancel</button>
+                                      <button className="button parcel__button danger">Cancel</button>
                                   ) : 
                                   (
-                                      <button className="button">
+                                      <button className="button parcel__button">
                                         <a href={`details?parcelId=${datum.id}`}>{option.text}</a>
                                       </button>
                                   )

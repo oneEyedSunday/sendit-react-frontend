@@ -2,6 +2,8 @@
     font-size: 1.2em;
     font-weight: 400;
     text-align: center;
+    margin: 0 auto;
+    font-family: 'Lato' sans-serif;
 }
 
 .parcel__context p > a {
@@ -10,4 +12,32 @@
 
 .parcel__context p>a:hover, .parcel__context p>a:focus {
     content: 'Create Order';
+}
+
+.parcel__button {
+    /* width: 100%; */
+}
+
+.parcel__button a {
+    color: #fff;
+}
+
+.parcel__button.danger {
+    padding: 7px 10px;
+}
+
+.parcel__button:hover > a, .parcel__button:focus > a {
+    color: var(--secondary-bg-color);
+}
+
+.margin-y-mixed {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 950px) {
+    .parcel__button {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
 }
