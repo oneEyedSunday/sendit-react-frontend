@@ -39,6 +39,7 @@
 
     .form__field {
         height: 50px;
+        padding: 0.3em 3px;
     }
 
     .form__field input {
