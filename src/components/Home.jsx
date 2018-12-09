@@ -4,7 +4,7 @@ export  default () => (
     	    <React.Fragment>
                 <div className="banner">
                     <div className="banner__content flex-column justify-content__center align-items__center">
-                        <div className="headline">
+                        <div className="headline text-center">
                             SendIT
                             <p className="subtitle">Your No.<span>1</span> Parcel Delivery solution</p>
                         </div>
