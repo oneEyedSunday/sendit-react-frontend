@@ -262,20 +262,17 @@ section {
 .howto div p:last-of-type::after {
   content: ''
 }
+
+.showcase {
+  margin: 0 auto 20px;
+}
+
 .showcase__item {
-  /* width: 100%; */
   background-color: #e1deda;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.showcase__item:nth-of-type(1) {
-  /* flex-direction: column-reverse; */
-}
-
-/* TODO (oneeyedsunday */
-/* remove width and height and bg-color */
-/* when you revert to image based figure */
 .showcase__item figure {
   padding: 10px 20px;
   position: relative;
@@ -289,17 +286,11 @@ section {
   width: 100%;
 }
 
-.showcase {
-  margin-bottom: 20px;
-}
-
 .showcase .showcase__item {
-  /* margin-right: 20px; */
   border-right: 1px solid #fff;
 }
 
 .showcase .showcase__item:last-of-type {
-  /* margin-right: 20px; */
   border-right: none;
 }
 
@@ -354,7 +345,7 @@ section {
 }
 
 .button a {
-  /* padding: 5px 10px; */
+  padding: 5px 10px;
   text-decoration: none;
   display: block;
 }
@@ -392,6 +383,7 @@ section {
 
 .button.home__btn {
   background-color: #fff;
+  margin-top: 10px;
   font-size: 1.4em;
 }
 
@@ -421,18 +413,23 @@ button.tall-btn {
 
 .main {
   min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
   margin: 0;
 }
 .card {
   min-height: calc(100vh - 210px);
   min-width: 500px;
+  margin: 0 auto;
   align-items: center;
+  display: flex;
 }
 
 @media (max-width: 850px) {
   .showcase {
       flex-direction: column;
-      max-width: 100%;
   }
 
   .showcase .showcase__item {
@@ -480,6 +477,7 @@ button.tall-btn {
   }
   .header {
       height: 100%;
+      min-height: 70px;
   }
 
   .subtitle {
@@ -524,7 +522,7 @@ button.tall-btn {
   }
 
   .card {
-      min-width: 350px;
+      min-width: 100%;
       min-height: calc(100vh - 300px);
   }
 
@@ -536,5 +534,11 @@ button.tall-btn {
   .showcase__text {
       padding: 10% 10px;
       font-size: 0.8 em;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .card {
+    margin: 20px auto;
   }
 }
