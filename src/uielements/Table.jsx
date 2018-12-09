@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './table.css';
 
 const options = [
@@ -42,7 +43,7 @@ export default props => (
                                   ) : 
                                   (
                                       <button className="button parcel__button">
-                                        <a href={`details?parcelId=${datum.id}`}>{option.text}</a>
+                                        <Link to={`/parcels/details/${datum.id}`}>{option.text}</Link>
                                       </button>
                                   )
                                }
