@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import components from './components';
+import './App.css'
 
 const { Footer, NavBar, Home, Auth, Parcels } = components;
 
