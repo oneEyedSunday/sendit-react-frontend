@@ -375,9 +375,9 @@ section {
 
 .button.primary-action:hover, .button.primary-action:focus, .button.primary-action:focus a,
 .button.primary-action:hover a, .button.primary-action a:hover, .button.primary-action a:focus {
-  background-color: #fff;
+  background-color: lightgreen;
   border-color: lightgreen;
-  color: lightgreen;
+  color: darkgreen;
 }
 
 .button.home__btn {
