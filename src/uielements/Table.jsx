@@ -18,9 +18,7 @@ const options = [
 ]
 
 export default props => (
-    <div id="overflowContainer" style={{
-        overflowX: 'auto',
-    }}>
+    <div id="overflowContainer">
         <table className="margin-y-mixed">
             <thead>
                 <tr>
