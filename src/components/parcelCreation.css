@@ -1,0 +1,12 @@
+.parcel__input {
+    width: 60%;
+}
+
+.parcel__creation .form__field {
+    justify-content: center;
+    align-items: center;
+}
+
+.parcel__creation.form {
+    margin-top: 20px;
+}
