@@ -41,7 +41,7 @@ export default class Parcels extends Component {
                             <span className="info">N500</span>
                         </div>
                         <div className="info__field">
-                            <button type="submit" className="button three-fifths danger" id="actionButton">Cancel Order</button>
+                            <button type="submit" className="button danger" id="actionButton">Cancel Order</button>
                             <a href="edit.html" className="text-center float-right">Edit &rarr;</a>
                         </div>
                     </div>
