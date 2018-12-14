@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import './parcelCreation.css'
 
 const getContext = mode => {
@@ -17,9 +18,32 @@ const getContext = mode => {
     return context;
 }
 
-export default class ParcelCreation extends Component {
+class ParcelCreation extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            destination: '',
+            pickUpLocation: '',
+            weight: ''
+        }
+    }
+
     componentDidMount() {
         console.log(this.props);
+    }
+
+    handleChange = evt => {
+        const newData = {
+            ...this.state,
+            [evt.target.name]: evt.target.value
+        }
+        this.setState(newData);
+    }
+
+    submitForm = evt => {
+        evt.preventDefault();
+        this.props.history.push('/parcels')
     }
 
     render() {
@@ -30,14 +54,24 @@ export default class ParcelCreation extends Component {
                 <a href="/parcels" title="Go Back to Parcel Inventory" className="float-left">&larr;</a>
                  {heading}
                 </div>
-                <form action="#" className="form parcel__creation">
+                <form action="#" className="form parcel__creation" onSubmit={this.submitForm}>
                     <div className="form__field flex">
                         <label htmlFor="destination">{destinationLabel}</label>
-                        <input type="text" name="destination" className="parcel__input" placeholder={destinationLabel}/>
+                        <input type="text" name="destination"
+                        className="parcel__input"
+                        placeholder={destinationLabel}
+                        value={this.state.destination}
+                        onChange={this.handleChange}
+                        />
                     </div>
                     <div className="form__field flex">
-                        <label htmlFor="pick-up-location">{pickUpLocationLabel}</label>
-                        <input type="text" name="pick-up-location" className="parcel__input" placeholder={pickUpLocationLabel}/>
+                        <label htmlFor="pickUpLocation">{pickUpLocationLabel}</label>
+                        <input type="text" name="pickUpLocation"
+                        className="parcel__input"
+                        placeholder={pickUpLocationLabel}
+                        value={this.state.pickUpLocation}
+                        onChange={this.handleChange}
+                        />
                     </div>
                     {
                         this.props.mode.toLowerCase() === 'create' ? 
@@ -48,6 +82,8 @@ export default class ParcelCreation extends Component {
                                     <input type="number" range="50" name="weight" 
                                     placeholder="Weight in Kilogrammes (kg)"
                                     className="parcel__input"
+                                    value={this.state.weight}
+                                    onChange={this.handleChange}
                                     />
                                 </div>
                             </React.Fragment>   
@@ -61,3 +97,6 @@ export default class ParcelCreation extends Component {
         )
     }
 };
+
+
+export default withRouter(ParcelCreation);
