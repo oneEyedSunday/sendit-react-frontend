@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import './forms.css';
 import './parcels.css';
 
@@ -11,7 +12,7 @@ export default class Parcels extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="card flex-column">
+                <div className="card flex-column my-2">
                     <div className="parcel__context sevenOfWidth">
                         <a href="/parcels" title="Go Back to Parcel Inventory" className="float-left">&larr;</a> Order Details
                     </div>
@@ -42,7 +43,7 @@ export default class Parcels extends Component {
                         </div>
                         <div className="info__field">
                             <button type="submit" className="button danger" id="actionButton">Cancel Order</button>
-                            <a href="edit.html" className="text-center float-right">Edit &rarr;</a>
+                            <Link to="/parcels/edit/" className="text-center float-right">Edit &rarr;</Link>
                         </div>
                     </div>
                 </div>
