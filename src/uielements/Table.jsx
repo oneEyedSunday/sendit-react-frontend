@@ -40,9 +40,9 @@ export default props => (
                                       <button className="button parcel__button danger">Cancel</button>
                                   ) : 
                                   (
-                                      <button className="button parcel__button">
+                                      <div className="button parcel__button">
                                         <Link to={`/parcels/details/${datum.id}`}>{option.text}</Link>
-                                      </button>
+                                      </div>
                                   )
                                }
                             </td>
