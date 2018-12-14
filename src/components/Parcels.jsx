@@ -48,7 +48,7 @@ export default class Parcels extends Component {
                             <React.Fragment>
                                 <div className="parcel__context">
                                     <p>Your parcel delivery orders
-                                        <a href="/create" className="action link" title="Create Order"> &#43; </a>
+                                        <a href="/create" className="parcel__floating__btn" title="Create Order"> &#43; </a>
                                     </p>
                                 </div>
                                 <Table  headers={this.headers} data={this.state.parcels}/>

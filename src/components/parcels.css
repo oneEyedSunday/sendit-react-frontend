@@ -6,16 +6,16 @@
     font-family: 'Lato', sans-serif;
 }
 
-.parcel__context p > a {
-    margin-left: 10%;
-}
-
 .parcel__context p>a:hover, .parcel__context p>a:focus {
     content: 'Create Order';
 }
 
-.parcel__button {
-    /* width: 100%; */
+.parcel__floating__btn {
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    border-radius: 50%;
+    padding: 10px 20px;
+    color: #fff;    
 }
 
 .parcel__button a {
