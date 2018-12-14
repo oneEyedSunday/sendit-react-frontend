@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import './forms.css';
 import './parcels.css';
-
-export default class Parcels extends Component {
+class ParcelDetails extends Component {
 
     componentDidMount() {
         console.log(this.props);
@@ -14,7 +13,7 @@ export default class Parcels extends Component {
             <React.Fragment>
                 <div className="card flex-column my-2">
                     <div className="parcel__context sevenOfWidth">
-                        <a href="/parcels" title="Go Back to Parcel Inventory" className="float-left">&larr;</a> Order Details
+                        <Link to="/parcels" title="Go Back to Parcel Inventory" className="float-left">&larr;</Link> Order Details
                     </div>
                     <div className="info__container">
                         <div className="info__field">
@@ -43,7 +42,7 @@ export default class Parcels extends Component {
                         </div>
                         <div className="info__field">
                             <button type="submit" className="button danger" id="actionButton">Cancel Order</button>
-                            <Link to="/parcels/edit/" className="text-center float-right">Edit &rarr;</Link>
+                            <Link to={`/parcels/edit/${this.props.match.params.id}`} className="text-center float-right">Edit &rarr;</Link>
                         </div>
                     </div>
                 </div>
@@ -51,3 +50,5 @@ export default class Parcels extends Component {
         )
     }
 }
+
+export default withRouter(ParcelDetails);

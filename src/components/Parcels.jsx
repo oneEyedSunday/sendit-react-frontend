@@ -49,8 +49,7 @@ export default class Parcels extends Component {
                 <Switch>
                     <Route  path="/parcels/details/:id" 
                     render={() => <ParcelDetailsComponent 
-                    parcels={this.state.parcels}
-                    location={this.props.location} />}/>
+                    parcels={this.state.parcels} />}/>
                     <Route path="/parcels/edit/:id" 
                     render={ () => <ParcelCreationComponent
                         parcels={this.state.parcels}

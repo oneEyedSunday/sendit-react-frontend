@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import './parcelCreation.css'
 
 const getContext = mode => {
@@ -51,7 +51,7 @@ class ParcelCreation extends Component {
         return (
             <div className="card my-2 flex-column">
                 <div className="parcel__context sevenOfWidth">
-                <a href="/parcels" title="Go Back to Parcel Inventory" className="float-left">&larr;</a>
+                <Link to="/parcels" title="Go Back to Parcel Inventory" className="float-left">&larr;</Link>
                  {heading}
                 </div>
                 <form action="#" className="form parcel__creation" onSubmit={this.submitForm}>
