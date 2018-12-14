@@ -9,11 +9,13 @@ const options = [
     },
     {
         class: '',
-        text: 'Details'
+        text: 'Details',
+        url: 'details'
     },
     {
         class: '',
-        text: 'Edit'
+        text: 'Edit',
+        url: 'edit'
     }
 ]
 
@@ -41,7 +43,7 @@ export default props => (
                                   ) : 
                                   (
                                       <div className="button parcel__button">
-                                        <Link to={`/parcels/details/${datum.id}`}>{option.text}</Link>
+                                        <Link to={`/parcels/${option.url}/${datum.id}`}>{option.text}</Link>
                                       </div>
                                   )
                                }
