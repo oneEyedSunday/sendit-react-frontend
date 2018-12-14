@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import uielems from '../uielements';
 import ParcelDetailsComponent from './ParcelDetails';
+import ParcelCreationComponent from './ParcelCreation';
 
 import './parcels.css';
 
@@ -43,6 +44,7 @@ export default class Parcels extends Component {
             <Router>
                 <Switch>
                     <Route  path="/parcels/details/:id" render={() => <ParcelDetailsComponent parcels={this.state.parcels}/>}/>
+                    <Route path="/parcels/edit/:id" render={ () => <ParcelCreationComponent  parcels={this.state.parcels} mode="edit" /> } />
                     <Route path="**"  render={
                         () => (
                             <React.Fragment>
