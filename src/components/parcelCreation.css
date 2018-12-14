@@ -10,3 +10,30 @@
 .parcel__creation.form {
     margin-top: 20px;
 }
+
+@media (max-width: 500px) {
+    .parcel__creation .form__field {
+        flex-direction: column;
+    } 
+
+    .parcel__creation .form__field {
+        /* reset */
+        /* initial 50px + 30px for label */
+        height: 80px;
+    }
+
+    .parcel__creation .form__field > * {
+        margin: 5px 0;
+    }
+
+    .parcel__creation .form__field:last-of-type {
+        height: 50px;
+    }
+
+    .parcel__input, .parcel__input::placeholder {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.2em;
+        padding-left: 10px;
+    }
+}
+
