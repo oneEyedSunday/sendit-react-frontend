@@ -39,12 +39,16 @@ export default class Parcels extends Component {
         this.headers = ['S/N', 'Date Created', 'Destination', 'Delivery Status', 'Options'];
     }
 
+    componentDidMount() {
+        console.log(this.props);
+    }
+
     render() {
         return (
             <Router>
                 <Switch>
-                    <Route  path="/parcels/details/:id" render={() => <ParcelDetailsComponent parcels={this.state.parcels}/>}/>
-                    <Route path="/parcels/edit/:id" render={ () => <ParcelCreationComponent  parcels={this.state.parcels} mode="edit" /> } />
+                    <Route  path="/parcels/details/:id" render={() => <ParcelDetailsComponent parcels={this.state.parcels} location={this.props.location} />}/>
+                    <Route path="/parcels/edit/:id" render={ () => <ParcelCreationComponent  parcels={this.state.parcels} mode="edit" location={this.props.location} /> } />
                     <Route path="**"  render={
                         () => (
                             <React.Fragment>
