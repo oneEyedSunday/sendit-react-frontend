@@ -16,7 +16,11 @@
     border-radius: 50%;
     padding: 10px 20px;
     color: #fff;    
-    margin-left: 10%;
+    margin-left: 30px;
+}
+
+.parcel__button {
+    text-align: center;
 }
 
 .parcel__button a {
@@ -88,3 +92,9 @@
     }
 }
 
+
+@media (min-width: 900px) {
+    .info__container {
+        width: 100%;
+    }
+}
